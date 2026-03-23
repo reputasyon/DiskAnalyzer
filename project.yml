@@ -1,0 +1,29 @@
+name: DiskAnalyzer
+options:
+  bundleIdPrefix: com.appo
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "16.0"
+  generateEmptyDirectories: false
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+targets:
+  DiskAnalyzer:
+    type: application
+    platform: macOS
+    sources:
+      - DiskAnalyzer
+    settings:
+      base:
+        CODE_SIGN_ENTITLEMENTS: DiskAnalyzer/DiskAnalyzer.entitlements
+        CODE_SIGN_STYLE: Automatic
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.appo.DiskAnalyzer
+        PRODUCT_NAME: "Disk Analiz"
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.utilities"
+        INFOPLIST_KEY_NSHumanReadableCopyright: ""
+        ENABLE_HARDENED_RUNTIME: YES
